@@ -109,6 +109,9 @@ class collectd::params {
                         $signalfx_collectd_repo_source       = 'https://dl.signalfx.com/rpms/SignalFx-rpms/release/SignalFx-collectd-RPMs-AWS_EC2_Linux-release-latest.noarch.rpm'
                         $signalfx_plugin_repo_source         = 'https://dl.signalfx.com/rpms/SignalFx-rpms/release/SignalFx-collectd_plugin-RPMs-AWS_EC2_Linux-release-latest.noarch.rpm'
                         case $::operatingsystemrelease {
+                            '2': {
+                                # No old_signalfx_collectd_repo_source on v2
+                            }
                             '2016.03': {
                                 # No old_signalfx_collectd_repo_source on 2016.03
                             }
